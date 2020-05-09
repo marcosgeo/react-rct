@@ -1,0 +1,11 @@
+language: generic
+sudo: required
+services:
+    - docker
+
+before_install:
+    - docker build -t marcosgeo/react-rct -f Dockerfile.dev .
+
+script:
+    - docker run -e CI=true marcosgeo/react-rct npm run test -- --coverage
+
