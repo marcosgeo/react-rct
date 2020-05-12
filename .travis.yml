@@ -9,3 +9,15 @@ before_install:
 script:
     - docker run -e CI=true marcosgeo/react-rct npm run test -- --coverage
 
+deploy:
+    privider: elasticbeanstalk
+    region: "us-east-2"
+    app: "reactrct"
+    env: "reactrct-env"
+    bucket_name: "elasticbeanstalk-us-east-2-454276808754"
+    bucket_path: "reactrct"
+    on:
+        branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+
