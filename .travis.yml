@@ -12,10 +12,10 @@ script:
 deploy:
     privider: elasticbeanstalk
     region: "us-east-2"
-    app: "reactrct"
-    env: "reactrct-env"
+    app: "react-rct"
+    env: "ReactRct-env"
     bucket_name: "elasticbeanstalk-us-east-2-454276808754"
-    bucket_path: "reactrct"
+    bucket_path: "react-rct"
     on:
         branch: master
     access_key_id: $AWS_ACCESS_KEY
