@@ -2,7 +2,6 @@ language: generic
 sudo: required
 services:
     - docker
-
 before_install:
     - docker build -t marcosgeo/react-rct -f Dockerfile.dev .
 
@@ -15,7 +14,7 @@ deploy:
     app: "react-rct"
     env: "ReactRct-env"
     bucket_name: "elasticbeanstalk-us-east-2-454276808754"
-    bucket_path: "react-rct"
+    bucket_path: "react-dck"
     on:
         branch: master
     access_key_id: $AWS_ACCESS_KEY
